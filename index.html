@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#102a43" />
+  <title>NagarPulse | Bhopal City Operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard" aria-label="NagarPulse home">
+        <span><strong>NagarPulse</strong><small>City operations</small></span>
+      </a>
+      <div class="sidebar-label">Workspace</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#dashboard" data-route="dashboard" data-admin-only>Overview</a>
+        <a href="#traffic" data-route="traffic" data-admin-only>Traffic management</a>
+        <a href="#reports" data-route="reports" id="reports-nav-label">Raise a Complaint</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="city-switcher"><span class="online-dot"></span><span><small>Monitoring city</small><strong>Bhopal, MP</strong></span><span class="chevron">⌄</span></div>
+        <div class="user-card"><div class="avatar" id="user-avatar">AK</div><span><strong id="user-name">Akshat</strong><small id="user-role">City admin</small></span><button id="logout-button" aria-label="Log out">↪</button></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="mobile-brand">NagarPulse</div><div class="topbar-actions"><span class="live-pill"><i></i>Live data simulation</span><button class="icon-button" aria-label="Notifications">♧<b></b></button><button class="avatar avatar-small" id="top-avatar">AS</button><button class="logout-link" id="top-logout">Log out</button></div></header>
+      <div id="app" class="page-container"></div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <button id="scroll-hint" class="scroll-hint" aria-label="Scroll down to see more">↓</button>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
